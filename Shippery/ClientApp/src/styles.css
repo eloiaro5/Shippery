@@ -1,0 +1,3 @@
+/* CSS to import other CSS's */
+@import "../../wwwroot/css/main.css";
+@import "../../wwwroot/css/fontawesome-all.min.css";

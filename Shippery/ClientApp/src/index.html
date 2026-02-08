@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>Shippery</title>
+  <base href="/" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+  <link rel="icon" type="image/x-icon" href="favicon.ico" />
+</head>
+<body class="homepage is-preload">
+  <nav id="nav">
+    <ul>
+      <li id="home"><a href="/"><span>Home</span><i class="fas fa-home"></i></a></li>
+      <li id="user">
+        <a href="/login"><span>User menu</span><i class="far fa-user"></i></a>
+        <ul class="user-menu">
+          <li>
+            <a href="#"><span>Settings</span><i class="far fa-user"></i></a>
+            <ul>
+              <li><a href="javascript:changeUserMenu('GeneralSettings');">General settings</a></li>
+              <li><a href="javascript:changeUserMenu('SecuritySettings');">Security settings</a></li>
+              <li><a href="javascript:changeUserMenu('NotificationSettings');">Notification settings</a></li>
+              <li><a href="javascript:changeUserMenu('WebpageSettings');">Webpage settings</a></li>
+              <li><a href="javascript:changeUserMenu('Statistics');">Statistics</a></li>
+            </ul>
+          </li>
+          <li>
+            <a href="#"><span>Services</span><i class="far fa-user"></i></a>
+            <ul>
+              <li><a href="javascript:changeUserMenu('OwnTrips');">Own trips</a></li>
+              <li><a href="javascript:changeUserMenu('Reserves');">Reserves</a></li>
+            </ul>
+          </li>
+          <li>
+            <a href="#"><span>Communication</span><i class="far fa-user"></i></a>
+            <ul>
+              <li><a href="javascript:changeUserMenu('Chats');">Chats</a></li>
+              <li><a href="javascript:changeUserMenu('Notifications');">Notifications</a></li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+      <li id="logged">
+        <a href="#"><span>TransMail center</span><i class="fas fa-bars"></i></a>
+        <ul>
+          <li><a href="#">Lorem ipsum dolor</a></li>
+          <li><a href="#">Magna phasellus</a></li>
+          <li>
+            <a href="#">Phasellus consequat</a>
+            <ul>
+              <li><a href="#">Lorem ipsum dolor</a></li>
+              <li><a href="#">Phasellus consequat</a></li>
+              <li><a href="#">Magna phasellus</a></li>
+              <li><a href="#">Etiam dolore nisl</a></li>
+            </ul>
+          </li>
+          <li><a href="#">Veroeros feugiat</a></li>
+        </ul>
+      </li>
+    </ul>
+  </nav>
+  <div id="page-wrapper">
+    <app-root>Wait while we're loading the awesome page...</app-root>
+  </div>
+  <div id="scripts">
+    <script src="js/jquery.min.js"></script>
+    <script src="js/jquery.dropotron.min.js"></script>
+    <script src="js/jquery.scrolly.min.js"></script>
+    <script src="js/browser.min.js"></script>
+    <script src="js/breakpoints.min.js"></script>
+    <script src="js/util.js"></script>
+    <script src="js/main.js" onload="configure(true)"></script>
+    <!-- <script src="js/Autocompleters.js" onload="LoadCompleters()"></script> -->
+    <script src="js/Cities.js"></script>
+  </div>
+</body>
+</html>

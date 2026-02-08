@@ -1,0 +1,123 @@
+<section id="main">
+  <div class="container">
+    <div class="row">
+      <div class="col-12">
+        <div class="content">
+          <article id="sign" class="box page-content">
+
+            <header id="log">
+              <h2>User</h2>
+              <p id="registerTitle">Log in</p>
+              <ul class="meta">
+                <li id="login" class="clickable signBTN signBTNshow" onclick="changeLoginMenu('logger')"><i id="loginIcon" class="fas fa-user-tag"></i><span>Alredy registrered? Log in!</span></li>
+                <li id="register" class="clickable signBTN signBTNshow" onclick="changeLoginMenu('registrer')"><i id="registerIcon" class="fas fa-user-plus"></i><span>Hasen't registered yet? Do it!</span></li>
+                <li id="forgot" class="clickable signBTN signBTNshow" onclick="changeLoginMenu('forggoter')"><i class="fas fa-user-lock"></i> <span>Forgot password?</span></li>
+              </ul>
+            </header>
+
+            <form #loginForm="ngForm" (ngSubmit)="Log(loginForm.value)" novalidate>
+              <section id="logger" class="sign">
+                <div class="row">
+                  <ul class="section">
+                    <li class="section">
+                      <ul class="element">
+                        <li><i class="fas fa-user"></i> Username:</li>
+                        <li><input name="Username" ngModel required #user="ngModel"></li>
+                      </ul>
+                    </li>
+                    <li class="section">
+                      <ul class="element">
+                        <li><i class="fas fa-user-shield"></i> Password:</li>
+                        <li>
+                          <ul>
+                            <li><input class="PasswordI" type="password" name="Password" ngModel required #password="ngModel" /></li>
+                            <li><i class="password-eye fas fa-eye" onmousedown="showPassword()" onmouseup="hidePassword()"></i></li>
+                          </ul>                        
+                        </li>
+                      </ul>
+                    </li>
+                    <li>                     
+                      <button type="submit"><i class="fas fa-sign-in-alt"></i> Login</button>
+                    </li>
+                  </ul>
+                </div>
+              </section>
+            </form>
+
+            <form #registerForm="ngForm" (ngSubmit)="Add(registerForm.value)" novalidate>
+              <section id="registrer" class="sign">
+                <div class="row">
+                  <ul class="section">
+                    <li class="section">
+                      <ul class="element">
+                        <li><i class="fas fa-user"></i> Username:</li>
+                        <li><input name="Username" ngModel required #user="ngModel"/></li>
+                      </ul>
+                    </li>
+                    <li class="section">
+                      <ul class="element">
+                        <li><i class="fas fa-user-shield"></i> Password:</li>
+                        <li>
+                          <ul>
+                            <li><input class="PasswordI" type="password" name="Password" ngModel required #password="ngModel"/></li>
+                            <li><i class="password-eye fas fa-eye" onmousedown="showPassword()" onmouseup="hidePassword()"></i></li>
+                          </ul>
+                        </li>
+                      </ul>
+                    </li>
+                    <li class="section">
+                      <ul class="element">
+                        <li><i class="fas fa-envelope"></i> Electronic mail:</li>
+                        <li><input name="Mail" ngModel required #mail="ngModel"/></li>
+                      </ul>
+                    </li>
+                    <li class="section">
+                      <ul class="element">
+                        <li><i class="fas fa-money-bill-wave"></i> Preferrend currency:</li>
+                        <li>
+                          <select [(ngModel)]="default" id="loginCurrencySelector" name="Currency" ngModel required #currency="ngModel">
+                            Name + " (" + Code + "): " + Symbol;
+                            <option *ngFor="let currency of currencies" value="{{currency.code}}">
+                              {{currency.name}} ({{currency.symbol}}): {{currency.code}}
+                            </option>
+                          </select>
+                        </li>
+                      </ul>
+                    </li>
+                    <li>
+                      <button type="submit"><i class="fas fa-user-check"></i> Register</button>
+                    </li>
+                  </ul>
+                </div>
+              </section>
+            </form>
+
+            <form #forgetForm="ngForm" (ngSubmit)="Forgot(forgetForm.value)" novalidate>
+              <section id="forggoter" class="sign">
+                <div class="row">
+                  <ul class="section">
+                    <li class="section">
+                      <ul class="element">
+                        <li><i class="fas fa-user"></i> Username:</li>
+                        <li><input name="Username" ngModel required #user="ngModel"/></li>
+                      </ul>
+                    </li>
+                    <li class="section">
+                      <ul class="element">
+                        <li><i class="fas fa-envelope"></i> Electronic mail:</li>
+                        <li><input name="Mail" ngModel required #mail="ngModel"/></li>
+                      </ul>
+                    </li>
+                    <li>
+                      <button type="submit"><i class="fas fa-unlock-alt"></i> Recover</button>
+                    </li>
+                  </ul>
+                </div>
+              </section>
+            </form>
+          </article>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
